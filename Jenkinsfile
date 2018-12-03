@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'sudo /usr/bin/systemctl stop train-schedule && rm -rf /home/test/train-schedule/* && unzip /tmp/trainSchedule.zip -d /home/test/train-schedule && sudo /usr/bin/systemctl start train-schedule'
+                                        execCommand: 'rm -rf /home/test/train-schedule/* && unzip /tmp/trainSchedule.zip -d /home/test/train-schedule'
                                     )
                                 ]
                             )
@@ -61,7 +61,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'sudo /usr/bin/systemctl stop train-schedule && rm -rf /home/test/train-schedule/* && unzip /tmp/trainSchedule.zip -d /home/test/train-schedule && sudo /usr/bin/systemctl start train-schedule'
+                                        execCommand: 'rm -rf /home/test/train-schedule/* && unzip /tmp/trainSchedule.zip -d /home/test/train-schedule'
                                     )
                                 ]
                             )
